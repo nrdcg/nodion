@@ -1,0 +1,14 @@
+{
+  "record": {
+    "id": "748d688a-3004-4b84-b8b8-8cb2e07c5c71",
+    "record_type": "a",
+    "name": "www",
+    "content": "1.2.3.4",
+    "ttl": 60,
+    "prio": null,
+    "port": null,
+    "weight": null,
+    "created_at": "2023-02-10T21:32:54.749+01:00",
+    "updated_at": "2023-02-10T21:32:54.749+01:00"
+  }
+}

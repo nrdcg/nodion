@@ -1,0 +1,7 @@
+{
+  "errors": [
+    "Name can't be blank",
+    "Name must be between 1 and 255 characters long",
+    "Name is not a fully qualified domain name"
+  ]
+}

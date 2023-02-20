@@ -1,0 +1,5 @@
+{
+  "errors": [
+    "Error {\"error\": \"Duplicate record in RRset test.nodiontest.de. IN TXT with content \\\"\\\"txtTXTtxt\\\"\\\"\"}"
+  ]
+}

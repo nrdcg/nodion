@@ -1,7 +1,7 @@
 run:
-  deadline: 5m
-  skip-files: [ ]
-  skip-dirs: [ ]
+  timeout: 5m
+  skip-files:
+    - 'client_prod_test.go'
 
 linters-settings:
   govet:
@@ -42,6 +42,10 @@ linters-settings:
       - octalLiteral
       - hugeParam
       - paramTypeCombine # already handled by gofumpt.extra-rules
+  tagliatelle:
+    case:
+      rules:
+        json: snake
 
 linters:
   enable-all: true

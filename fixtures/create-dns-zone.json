@@ -1,0 +1,75 @@
+{
+  "dns_zone": {
+    "id": "52be5f1b-fee7-4a42-b668-85890c41be5b",
+    "name": "nodionsample.com",
+    "created_at": "2023-01-01T10:00:00.000+01:00",
+    "updated_at": "2023-01-01T10:00:00.000+01:00",
+    "records": [
+      {
+        "id": "5ed9465f-f8c6-432d-9474-3e9880f6adfe",
+        "record_type": "a",
+        "name": "@",
+        "content": "1.2.3.4",
+        "ttl": 3600,
+        "prio": null,
+        "port": null,
+        "weight": null,
+        "zone_id": "52be5f1b-fee7-4a42-b668-85890c41be5b",
+        "created_at": "2023-01-01T10:00:00.000+01:00",
+        "updated_at": "2023-01-01T10:00:00.000+01:00"
+      },
+      {
+        "id": "60a0647b-0b08-4dc0-8d51-4e21c799457c",
+        "record_type": "a",
+        "name": "*",
+        "content": "1.2.3.4",
+        "ttl": 3600,
+        "prio": null,
+        "port": null,
+        "weight": null,
+        "zone_id": "52be5f1b-fee7-4a42-b668-85890c41be5b",
+        "created_at": "2023-01-01T10:00:00.000+01:00",
+        "updated_at": "2023-01-01T10:00:00.000+01:00"
+      },
+      {
+        "id": "b4748041-f3b2-40f3-9217-9af016c5937f",
+        "record_type": "a",
+        "name": "www",
+        "content": "1.2.3.4",
+        "ttl": 3600,
+        "prio": null,
+        "port": null,
+        "weight": null,
+        "zone_id": "52be5f1b-fee7-4a42-b668-85890c41be5b",
+        "created_at": "2023-01-01T10:00:00.000+01:00",
+        "updated_at": "2023-01-01T10:00:00.000+01:00"
+      },
+      {
+        "id": "d13e85ce-7d04-4770-9197-19f87f35e6a8",
+        "record_type": "ns",
+        "name": "@",
+        "content": "ns1.nodion.com",
+        "ttl": 3600,
+        "prio": null,
+        "port": null,
+        "weight": null,
+        "zone_id": "52be5f1b-fee7-4a42-b668-85890c41be5b",
+        "created_at": "2023-01-01T10:00:00.000+01:00",
+        "updated_at": "2023-01-01T10:00:00.000+01:00"
+      },
+      {
+        "id": "f5454bf7-f89b-45a4-981f-7783102fd389",
+        "record_type": "ns",
+        "name": "@",
+        "content": "ns2.nodion.com",
+        "ttl": 3600,
+        "prio": null,
+        "port": null,
+        "weight": null,
+        "zone_id": "52be5f1b-fee7-4a42-b668-85890c41be5b",
+        "created_at": "2023-01-01T10:00:00.000+01:00",
+        "updated_at": "2023-01-01T10:00:00.000+01:00"
+      }
+    ]
+  }
+}

@@ -11,7 +11,33 @@ nodion is a Go client library for accessing the Nodion DNS API.
 ## Examples
 
 ```go
-FIXME
+package main
+
+import (
+	"context"
+	"fmt"
+	"log"
+
+	"github.com/nrdcg/nodion"
+)
+
+const apiToken = "xxx"
+
+func main() {
+	client, err := nodion.NewClient(apiToken)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	ctx := context.Background()
+
+	zones, err := client.CreateZone(ctx, "example.com")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println(zones)
+}
 ```
 
 ## API Documentation
