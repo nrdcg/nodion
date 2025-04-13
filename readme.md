@@ -42,4 +42,4 @@ func main() {
 
 ## API Documentation
 
-- [API docs](https://www.nodion.com/en/docs/dns/api/)
+- [API docs](https://www.nodion.com/en/docs/api/dns-zones/)

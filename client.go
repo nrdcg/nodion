@@ -43,7 +43,7 @@ func NewClient(apiToken string) (*Client, error) {
 }
 
 // CreateZone To create a new DNS Zone.
-// https://www.nodion.com/en/docs/dns/api/#post-dns-zone
+// https://www.nodion.com/en/docs/api/dns-zones/#post-dns-zone
 func (c Client) CreateZone(ctx context.Context, name string) (*Zone, error) {
 	endpoint := c.baseURL.JoinPath("dns_zones")
 
@@ -68,7 +68,7 @@ func (c Client) CreateZone(ctx context.Context, name string) (*Zone, error) {
 }
 
 // DeleteZone To delete an existing DNS Zone.
-// https://www.nodion.com/en/docs/dns/api/#delete-dns-zone
+// https://www.nodion.com/en/docs/api/dns-zones/#delete-dns-zone
 func (c Client) DeleteZone(ctx context.Context, zoneID string) (bool, error) {
 	endpoint := c.baseURL.JoinPath("dns_zones", zoneID)
 
@@ -87,7 +87,7 @@ func (c Client) DeleteZone(ctx context.Context, zoneID string) (bool, error) {
 }
 
 // GetZones To list all existing DNS zones.
-// https://www.nodion.com/en/docs/dns/api/#get-dns-zones
+// https://www.nodion.com/en/docs/api/dns-zones/#get-dns-zones
 func (c Client) GetZones(ctx context.Context, filter *ZonesFilter) ([]Zone, error) {
 	endpoint := c.baseURL.JoinPath("dns_zones")
 
@@ -113,7 +113,7 @@ func (c Client) GetZones(ctx context.Context, filter *ZonesFilter) ([]Zone, erro
 }
 
 // CreateRecord To create a new Record for a DNS zone.
-// https://www.nodion.com/en/docs/dns/api/#post-dns-record
+// https://www.nodion.com/en/docs/api/dns-zones/#post-dns-record
 func (c Client) CreateRecord(ctx context.Context, zoneID string, record Record) (*Record, error) {
 	endpoint := c.baseURL.JoinPath("dns_zones", zoneID, "records")
 
@@ -138,7 +138,7 @@ func (c Client) CreateRecord(ctx context.Context, zoneID string, record Record) 
 }
 
 // DeleteRecord To delete an existing Record for a DNS zone.
-// https://www.nodion.com/en/docs/dns/api/#delete-dns-record
+// https://www.nodion.com/en/docs/api/dns-zones/#delete-dns-record
 func (c Client) DeleteRecord(ctx context.Context, zoneID, recordID string) (bool, error) {
 	endpoint := c.baseURL.JoinPath("dns_zones", zoneID, "records", recordID)
 
@@ -157,7 +157,7 @@ func (c Client) DeleteRecord(ctx context.Context, zoneID, recordID string) (bool
 }
 
 // GetRecords To list all existing Records of a DNS zone.
-// https://www.nodion.com/en/docs/dns/api/#get-dns-records
+// https://www.nodion.com/en/docs/api/dns-zones/#get-dns-records
 func (c Client) GetRecords(ctx context.Context, zoneID string, filter *RecordsFilter) ([]Record, error) {
 	endpoint := c.baseURL.JoinPath("dns_zones", zoneID, "records")
 
