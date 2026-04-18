@@ -53,9 +53,11 @@ func readFileHandler(method string, statusCode int, filename string) http.Handle
 			http.Error(rw, err.Error(), http.StatusInternalServerError)
 			return
 		}
+
 		defer func() { _ = file.Close() }()
 
 		rw.WriteHeader(statusCode)
+
 		_, err = io.Copy(rw, file)
 		if err != nil {
 			http.Error(rw, err.Error(), http.StatusInternalServerError)

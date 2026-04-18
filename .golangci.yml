@@ -62,6 +62,9 @@ linters:
     godox:
       keywords:
         - FIXME
+    gosec:
+      excludes:
+        - G704
     govet:
       disable:
         - fieldalignment

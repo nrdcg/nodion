@@ -48,6 +48,7 @@ func (c Client) CreateZone(ctx context.Context, name string) (*Zone, error) {
 	endpoint := c.baseURL.JoinPath("dns_zones")
 
 	body := &bytes.Buffer{}
+
 	err := json.NewEncoder(body).Encode(Zone{Name: name})
 	if err != nil {
 		return nil, fmt.Errorf("encode request body: %w", err)
@@ -59,6 +60,7 @@ func (c Client) CreateZone(ctx context.Context, name string) (*Zone, error) {
 	}
 
 	var result ZoneResponse
+
 	err = c.do(req, &result)
 	if err != nil {
 		return nil, err
@@ -78,6 +80,7 @@ func (c Client) DeleteZone(ctx context.Context, zoneID string) (bool, error) {
 	}
 
 	var result DeleteResponse
+
 	err = c.do(req, &result)
 	if err != nil {
 		return false, err
@@ -104,6 +107,7 @@ func (c Client) GetZones(ctx context.Context, filter *ZonesFilter) ([]Zone, erro
 	}
 
 	var result ZonesResponse
+
 	err = c.do(req, &result)
 	if err != nil {
 		return nil, err
@@ -118,6 +122,7 @@ func (c Client) CreateRecord(ctx context.Context, zoneID string, record Record) 
 	endpoint := c.baseURL.JoinPath("dns_zones", zoneID, "records")
 
 	body := &bytes.Buffer{}
+
 	err := json.NewEncoder(body).Encode(record)
 	if err != nil {
 		return nil, fmt.Errorf("encode request body: %w", err)
@@ -129,6 +134,7 @@ func (c Client) CreateRecord(ctx context.Context, zoneID string, record Record) 
 	}
 
 	var result RecordResponse
+
 	err = c.do(req, &result)
 	if err != nil {
 		return nil, err
@@ -148,6 +154,7 @@ func (c Client) DeleteRecord(ctx context.Context, zoneID, recordID string) (bool
 	}
 
 	var result DeleteResponse
+
 	err = c.do(req, &result)
 	if err != nil {
 		return false, err
@@ -174,6 +181,7 @@ func (c Client) GetRecords(ctx context.Context, zoneID string, filter *RecordsFi
 	}
 
 	var result RecordsResponse
+
 	err = c.do(req, &result)
 	if err != nil {
 		return nil, err
