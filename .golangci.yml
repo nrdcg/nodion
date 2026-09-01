@@ -6,7 +6,9 @@ formatters:
     - gofumpt
   settings:
     gofumpt:
-      extra-rules: true
+      extra:
+        group-params: true
+        clothe-returns: true
 
 linters:
   default: all
@@ -17,7 +19,9 @@ linters:
     - err113
     - exhaustive
     - exhaustruct
+    - exhaustruct_v5
     - forcetypeassert
+    - gomodguard
     - lll
     - mnd
     - nlreturn
@@ -88,6 +92,7 @@ linters:
     rules:
       - linters:
           - funlen
+          - goconst
         path: .*_test.go
     paths:
       - client_prod_test.go
